@@ -8,10 +8,10 @@ Things you may want to cover:
 * Ruby version
 ruby-2.3.0
 * System dependencies
-In Gemfile
+You can check in Gemfile
 * Configuration
 * Database creation
-
+SQLite3
 * Database initialization
 
 * How to run the test suite
