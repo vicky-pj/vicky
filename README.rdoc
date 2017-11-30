@@ -10,7 +10,9 @@ ruby-2.3.0
 * System dependencies
 You can check in Gemfile
 * Configuration
-check in config.ru
+<<<<<<< HEAD
+=======
+>>>>>>> 4b8e44d5738ef71a4f8b7c4e2e62bb0b4dce661b
 * Database creation
 SQLite3
 * Database initialization
