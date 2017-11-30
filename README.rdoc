@@ -10,7 +10,6 @@ ruby-2.3.0
 * System dependencies
 In Gemfile
 * Configuration
-config.ru
 * Database creation
 
 * Database initialization
