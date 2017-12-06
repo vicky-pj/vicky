@@ -28,3 +28,7 @@ Webrick
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+2017-12-06
+
+- 添加抓取数据，处理数据的python程序
