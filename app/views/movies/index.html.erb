@@ -1,33 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Listing Movies</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Place</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Detail url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @movies.each do |movie| %>
-      <tr>
-        <td><%= movie.title %></td>
-        <td><%= movie.place %></td>
-        <td><%= movie.description %></td>
-        <td><%= movie.image_url %></td>
-        <td><%= movie.detail_url %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<% @movies.each do |movie| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td>
+      <%= image_tag(movie.image_url, class: 'list_image') %>
+    </td>
+    
+    <td class "list_description">
+      <dl>
+        <dt><%= movie.title %></dt>
+        <dt><%= movie.place %></dt>
+        <dt><a href=<%= movie.detail_url %> target="_blank">watch movie</a></dt>
+        <dd><%= truncate(strip_tags(movie.description), length: 80) %></dd>
+      <dl>
+    </td>
+    
+    
+    <td class="list_actions">
+      <%= link_to 'Show', movie %><br/>
+      <%= link_to 'Edit', edit_movie_path(movie) %><br/>
+      <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+    
+  </tr>
+<% end %>
 </table>
 
 <br>
