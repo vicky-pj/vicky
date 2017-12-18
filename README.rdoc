@@ -10,6 +10,9 @@ ruby-2.3.0
 * System dependencies
 You can check in Gemfile
 * Configuration
+<<<<<<< HEAD
+=======
+>>>>>>> 4b8e44d5738ef71a4f8b7c4e2e62bb0b4dce661b
 * Database creation
 SQLite3
 * Database initialization
@@ -17,7 +20,7 @@ SQLite3
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
-
+Webrick
 * Deployment instructions
 
 * ...
@@ -25,3 +28,7 @@ SQLite3
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+2017-12-06
+
+- 添加抓取数据，处理数据的python程序
