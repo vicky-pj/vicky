@@ -3,6 +3,13 @@ require 'test_helper'
 class MoviesControllerTest < ActionController::TestCase
   setup do
     @movie = movies(:one)
+    @update = {
+      title:       'Test',
+      description: 'A test!',
+      place:       'test',
+      image_url:   'test.jpg',
+      detail_url:  'https://movie.douban.com'
+    }
   end
 
   test "should get index" do
@@ -18,7 +25,7 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should create movie" do
     assert_difference('Movie.count') do
-      post :create, movie: { description: @movie.description, detail_url: @movie.detail_url, image_url: @movie.image_url, place: @movie.place, title: @movie.title }
+      post :create, movie: @update
     end
 
     assert_redirected_to movie_path(assigns(:movie))
@@ -35,7 +42,7 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should update movie" do
-    patch :update, id: @movie, movie: { description: @movie.description, detail_url: @movie.detail_url, image_url: @movie.image_url, place: @movie.place, title: @movie.title }
+    patch :update, id: @movie, movie: @update
     assert_redirected_to movie_path(assigns(:movie))
   end
 
