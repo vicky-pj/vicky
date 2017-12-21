@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subject/index'
+
   resources :movies
   get 'say/hello'
 
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'subject#index', as: 'subject'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
