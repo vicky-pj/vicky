@@ -1,0 +1,17 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+ 
+<h1>Your Pragmatic Catalog</h1>
+ 
+<% @movies.each do |movie| %>
+  <div class="entry">
+    <%= image_tag(movie.image_url) %>
+    <h3><%= movie.title %></h3>
+    <h4><%= movie.place %></h4>
+    <%= sanitize(movie.description) %>
+    <div class="detail_url_line">
+      <a href=<%= movie.detail_url %> target="_blank"><span class="detail_url">watch movie</span></a>
+    </div>
+  </div>
+<% end %>

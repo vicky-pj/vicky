@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Listing Movies</h1>
+
+<table>
+<% @movies.each do |movie| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td>
+      <%= image_tag(movie.image_url, class: 'list_image') %>
+    </td>
+    
+    <td class "list_description">
+      <dl>
+        <dt><%= movie.title %></dt>
+        <dt><%= movie.place %></dt>
+        <dt><a href=<%= movie.detail_url %> target="_blank">watch movie</a></dt>
+        <dd><%= truncate(strip_tags(movie.description), length: 80) %></dd>
+      <dl>
+    </td>
+    
+    
+    <td class="list_actions">
+      <%= link_to 'Show', movie %><br/>
+      <%= link_to 'Edit', edit_movie_path(movie) %><br/>
+      <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>
