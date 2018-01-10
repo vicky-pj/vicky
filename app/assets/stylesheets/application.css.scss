@@ -59,6 +59,13 @@
         a {
           color: #203864;
           font-size: small;
+          &:visited {
+            color: #666;
+          }
+          &:hover {
+            color: green;
+            background-color: transparent;
+          }
         }
       }
     }
